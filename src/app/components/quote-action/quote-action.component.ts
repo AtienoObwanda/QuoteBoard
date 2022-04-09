@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Quote } from '@angular/compiler';
+import { Component, OnInit, Input, Output } from '@angular/core';
+import { Quotes } from 'src/app/model/Quotes';
 
 @Component({
   selector: 'app-quote-action',
@@ -6,8 +8,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./quote-action.component.css']
 })
 export class QuoteActionComponent implements OnInit {
+  @Input () quote !: Quotes
+  
 
   constructor() { }
+  //Add likes
+  likes(){
+    this.quote.likes++;
+  }
+  //Dislikes
+  dislikes(){
+    this.quote.dislikes++;
+  }
 
   ngOnInit(): void {
   }
