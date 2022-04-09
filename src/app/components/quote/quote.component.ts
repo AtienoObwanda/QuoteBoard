@@ -7,7 +7,8 @@ import {Quotes} from '../../model/Quotes';
   styleUrls: ['./quote.component.css']
 })
 export class QuoteComponent implements OnInit {
-  @Input () quote !: Quotes
+  @Input () quote !: Quotes;
+  likes=0
 
   inputQuote :string = "";
   inputAuthor:string="";
@@ -28,9 +29,10 @@ quotes !: Quotes[]
 
   }
    //Add likes
-   likeQuotes(id:number){
-     if (this.quotes.filter((v, i)=> i ==id)){
-      this.quote.likes +1;}
+   likeQuotes(){
+     //if (this.likes){
+      this.quote.likes +1;
+    //}
      
   }
   //Dislikes
