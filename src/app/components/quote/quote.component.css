@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap');
+*{
+	scroll-behavior: smooth;
+}
+.mainContainer{
+	margin-top: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.maincard{
+	padding-bottom: 5em;
+	border-radius: 5px;
+
+
+}
+.card1{
+	padding:3em;
+	border-radius: 15px;
+	box-shadow: 2px 0px 2px #FE4880;
+
+}
+.card2{
+	justify-content: center; 
+	align-items: center;
+	padding:2em;
+	border-radius: 14px;
+
+
+}
+.appInt{
+    font-family: 'Poppins', sans-serif;
+    color: #2900A5;
+    text-align: center;
+    vertical-align: middle;
+    overflow: hidden;
+}
+.appI{
+	margin-top: 2em;
+	margin-bottom: 1em;
+    color: #2900A5;
+    text-align: center;
+    vertical-align: middle;
+    overflow: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.card3{
+	box-shadow: 1px 0px 4px #FE4880;
+}
+
+.main-div{
+    margin-top: 4em!important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+	margin-bottom: 2em;
+  }
+  .appInt{
+    font-family: 'Poppins', sans-serif;
+    color: #2900A5;
+    text-align: center;
+    vertical-align: middle;
+    overflow: hidden;
+}
+.appdesc{
+    color: #2900A5;
+    text-align: center;
+    vertical-align: middle;
+    overflow: hidden;
+	font-weight: 400;
+	padding-bottom:1em ;
+	
+	
+}
+.quotes{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+    align-items: center;
+	margin-top: 3em!important;
+	padding-top: 2em !important;
+
+}
+.quote {
+	display: flex;
+	flex-direction: column;
+	padding: 10px 15px;
+	background-color: #FFF;
+	justify-content: center;
+    align-items: center;
+	width: 40%;
+	box-shadow: 1px 0px 4px #FE4880;
+}
+.icon{
+	display: flex;
+	flex-direction: row;
+	padding-left: 2em;
+	padding-right: 2em;
+	
+}
+
+.id{
+	display: none;
+}
+
+.quote input {
+
+	width: 100%;
+	padding: 10px 15px;
+	appearance: none;
+	border: none;
+	background-color: #F3F3F3;
+	margin-top: 15px;
+	justify-content: center;
+    align-items: center;
+	
+}
+
+.quote-submit {
+	display: block;
+	width: 100%;
+	max-width: 150px;
+	appearance: none;
+	border: none;
+	outline: none;
+	background: none;
+
+	background-color: #FE4880;
+	color: #FFF;
+	margin: 15px auto;
+
+	padding: 10px 15px;
+	font-size: 16px;
+	font-weight: 700;
+}
+.quoteForm{
+	justify-content: center;
+    align-items: center;
+
+}
