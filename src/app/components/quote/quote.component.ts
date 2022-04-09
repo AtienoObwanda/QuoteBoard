@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Input } from '@angular/core';
 import {Quotes} from '../../model/Quotes';
 
 @Component({
@@ -7,6 +7,8 @@ import {Quotes} from '../../model/Quotes';
   styleUrls: ['./quote.component.css']
 })
 export class QuoteComponent implements OnInit {
+  @Input () quote !: Quotes
+
   inputQuote :string = "";
   inputAuthor:string="";
   inputPublisher:string="";
@@ -21,10 +23,20 @@ quotes !: Quotes[]
     ]
 
   }
-
   addQuote(){
     this.quotes.push()
 
   }
+   //Add likes
+   likeQuotes(id:number){
+     if (this.quotes.filter((v, i)=> i ==id)){
+      this.quote.likes +1;}
+     
+  }
+  //Dislikes
+  dislikeQuotes(){
+    this.quote.dislikes +1;
+  }
+
 
 }

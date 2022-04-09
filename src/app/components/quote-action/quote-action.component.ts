@@ -12,15 +12,7 @@ export class QuoteActionComponent implements OnInit {
   
 
   constructor() { }
-  //Add likes
-  likes(){
-    this.quote.likes++;
-  }
-  //Dislikes
-  dislikes(){
-    this.quote.dislikes++;
-  }
-
+ 
   ngOnInit(): void {
   }
 

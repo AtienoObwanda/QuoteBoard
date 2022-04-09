@@ -2,7 +2,7 @@
     <div class="container maincard">
       <div class="row mt-4">
         <div class="col"> </div>
-        <div class="col-md-9 bg-white card1">
+        <div class="col-md-12 bg-white card1">
           <div class=""style="justify-content: center; align-items: center;">
             <h1 class="appInt" >Quote Board</h1>
   
@@ -52,13 +52,11 @@
                   <div class="card col-md-8 border-0">
                     <div class="id">{{i}}</div>
                     <div class="content">{{quote.quoteTitle}}</div>
-                    <div class="content"> Author: {{quote.author}}</div>
+                    <div class="content">Author:<cite>{{quote.author}}</cite> </div>
                     <div class="content">Publisher: {{quote.publisher}}</div> 
-                  </div>
-  
-               
-                    <button class="btn btn-outline-primary col me-2"><p></p></button>
-                    <button class="btn btn-outline-primary col me-2"><p></p></button>
+                  </div>             
+                    <button class="btn btn-outline-primary col me-2"(click)="likeQuotes(i)"><p>#</p>{{quote.likes}}</button>
+                    <button class="btn btn-outline-primary col me-2"(click)="dislikeQuotes()"><p>#</p>{{quote.dislikes}}</button>
                     <button class="btn btn-outline-danger col" >Del</button>
                 </div>
   
