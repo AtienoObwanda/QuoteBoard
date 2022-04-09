@@ -5,7 +5,6 @@
   }
   .footer{
       background-color: transparent;
-      padding: 3rem 1.5rem 6rem;
       width: 100%;
       overflow: hidden;
       margin-top: 20px;
@@ -14,12 +13,7 @@
       text-align: center !important;
       justify-content: center !important;
   }
-  .footer p{
-      vertical-align: middle;
-      font-size: 10;
-      color: #2900A5;
-      font-weight: bold;
-  }
+  
 .footer a{
     text-decoration: none;
     color: #2900A5;
@@ -35,7 +29,18 @@
     color: #2900A5;
     width: 100%;
     padding-bottom: 1em;
+    vertical-align: middle;
+    
   }
+  .footer p{
+    width: 100%;
+    vertical-align: middle;
+    font-size: 10;
+    color: #2900A5;
+    font-weight: medium;
+    margin-left: 2em;
+    
+ }
   .social :hover{
     color: #FE4880;
   }
