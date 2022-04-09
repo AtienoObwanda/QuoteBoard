@@ -10,13 +10,17 @@ import { AppComponent } from './app.component';
 import { BodyComponent } from './components/body/body.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { QuoteActionComponent } from './components/quote-action/quote-action.component';
+import { QuoteComponent } from './components/quote/quote.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BodyComponent,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    QuoteActionComponent,
+    QuoteComponent,
   ],
   imports: [
     BrowserModule,
