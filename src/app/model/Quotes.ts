@@ -1,15 +1,15 @@
-export class Quotes{
-    //seeDetails: boolean;
 
+export class Quotes {
+    showDetails: boolean;
     constructor(
-        public quoteTitle: string,
+        public quote: string,
         public author: string,
-        public publisher : string,
-        public likes:number,
-        public dislikes:number=0
-
-    )
-    {
-       //this.seeDetails = false
+        public name: string,
+        public submissionDate: Date,
+        public upVote: number,
+        public downVote: number,
+        // public smallText: any
+    ){
+        this.showDetails = false;
     }
 }

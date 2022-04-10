@@ -1,81 +1,94 @@
 <div class="container-fluid mainContainer">
   <div class="container maincard">
     <div class="row mt-4">
-      <div class="col"> </div>
       <div class="col-md-12 bg-white card1">
         <div class=""style="justify-content: center; align-items: center;">
           <h1 class="appInt" >Quote Board</h1>
 
           <h3 class="appdesc" >
-            Leave your mark... Post a Quote!
+            Leave your mark...
           </h3>
         </div>
-        <div class="shadow card2" >
-          <form (submit)="addQuote()" class="quoteForm">
-          <div class="input-group mb-3">
-            <input 
-            type="text" 
-            class="form-control"
-            name="inputQuote"
-            [(ngModel)]="inputQuote" 
-            placeholder=" Quote  Title">
-          </div>
-          <div class="input-group mb-3">
-            <input 
-            type="text" 
-            class="form-control"
-            name="inputAuthor"
-            [(ngModel)]="inputAuthor" 
-            placeholder=" Quote  Author">
-          </div>
-          <div class="input-group mb-3">
-            <input 
-            type="text" 
-            class="form-control"
-            name="inputPublisher"
-            [(ngModel)]="inputPublisher" 
-            placeholder=" Published By:">
-          </div>
-
-          
-
-          <button class="btn btn-outline-success" type="submit" class="quote-submit">POST  QUOTE</button>
-          
-          </form>
-        </div>
-
-        <div class="shadow card 2 popQuote">
-        <h1 class="appI">Popular Quotes</h1>
-        <div class="qContainer" style="overflow-y:auto; height:400px">
-              <div class="input-group row ps-3" *ngFor ="let quote of quotes; let i = index;">
-                <div class="m-3" >
-            <div class="p-2 shadow border">
-              <div class="input-group row ps-3">
-                <div class="card col-md-8 border-0">
-                  <div class="id">{{i}}</div>
-                  <div class="content">{{quote.quoteTitle}}</div>
-                  <div class="content"> Author: {{quote.author}}</div>
-                  <div class="content">Publisher: {{quote.publisher}}</div> 
-                </div>                
-                  <button class="btn btn-outline-primary col me-2"><p>{{quote.likes}}</p></button>
-                  <button class="btn btn-outline-primary col me-2" >-<p>{{quote.dislikes}}</p></button>
-                <button class="btn btn-outline-danger col" (click)="deleteQuote(i)">Del</button>
+        <div class="row">
+          <div class="col">
+            <div class="shadow card2" >
+              <form (submit)="addQuote(quotes)" class="quoteForm">
+              <div class="input-group mb-3">
+                <input 
+                type="text" 
+                class="form-control"
+                name="inputQuote"
+             
+                placeholder=" Quote  Title">
               </div>
-
+              <div class="input-group mb-3">
+                <input 
+                type="text" 
+                class="form-control"
+                name="inputAuthor"
+                
+                placeholder=" Quote  Author">
+              </div>
+              <div class="input-group mb-3">
+                <input 
+                type="text" 
+                class="form-control"
+                name="inputPublisher"
+              
+                placeholder=" Published By:">
+              </div>
+              <button class="btn btn-outline-success" type="submit" class="quote-submit">POST  QUOTE</button>
+              
+              </form>
             </div>
-
+          </div>
+          <div class="col">
+            <div class="shadow card2" >
+              <p>pop</p>
+            </div>
           </div>
         </div>
-
+        <div class="p-2 shadow border popQuote">
+          <h1 class="appI">Popular Quotes</h1>
+          <div class="qCont" style="overflow-y:auto; height:400px">
+          <div class="row">
+    
+            <div class="col-sm-12">
+                <div class="cards">
+                    <div class="card"  *ngFor='let quote of quotes; let i=index'>
+                        <div class="card-body" appHighlightQuote *ngIf="highlightHighest() == quote.upVote && quote.upVote > 0" >
+                        <blockquote class="blockquote mb-0 card-body">
+                            <p>{{quote.quote}}</p>
+                            <footer class="blockquote-footer">
+                                <cite title="Source Title" style="color: black;">{{quote.author|titlecase}}</cite>
+                                <small style="float:right; font-size:0.7rem;" (click)="toggleDetails(i);"><b style="color:rgb(90, 11, 74)">See more</b> </small>
+                            </footer>
+                            
+                          </blockquote>
+                        </div>
+                        <div class="card-body"  *ngIf="highlightHighest() != quote.upVote || quote.upVote == 0" >
+                            <blockquote class="blockquote mb-0 card-body">
+                                <p>{{quote.quote}}</p>
+                                <footer class="blockquote-footer">
+                                    <cite title="Source Title" style="color: black;">{{quote.author|titlecase}}</cite>
+                                    <small style="float:right; font-size:0.7rem;" (click)="toggleDetails(i);"><b style="color:rgb(90, 11, 74)">See more</b> </small>
+                                </footer>
+                                
+                              </blockquote>
+                            </div>
+                        <app-quotes-details *ngIf ="quote.showDetails " [quote]='quote' (deleteQuote) ="deletingQuote($event,i)"></app-quotes-details>
+                    </div>
+        
+                </div>
+            </div>
+              
+        </div>
       </div>
-    </div>
-      <div class="col"> </div>
-
-
-
-    </div>
-  </div>
-
-
+        
 </div>
 
+
+      </div>
+  </div>
+  </div>
+</div>

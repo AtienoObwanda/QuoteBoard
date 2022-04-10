@@ -1,6 +1,20 @@
-<button class="btn" (click)="likeQuotes()">{{quote.likes}}
-  DISLIKE
-</button>
-<button class="btn" (click)="dislikeQuotes">{{quote.dislikes}}
-   LIKE
-</button>
+<div class="card-footer text-muted">
+  <small>
+      Submitted by {{quote.name}} on {{quote.submissionDate}} <b style="color: rgb(54, 3, 27);">({{quote.submissionDate}} day(s) ago)</b>.
+  </small>
+  <button class="btn" style="color:red;" (click)="quoteDelete(true)">
+      <i class="fas fa-trash-alt"></i>
+      Delete
+  </button>
+  <button class="btn" (click)="downVote()">{{quote.downVote}}
+      <i class="fas fa-thumbs-down"></i>
+  </button>
+  <button class="btn" (click)="upVote()">{{quote.upVote}}
+      <i class="fas fa-thumbs-up"></i>
+  </button>
+  
+  
+  
+
+
+</div>

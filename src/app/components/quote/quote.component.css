@@ -15,9 +15,11 @@
 
 }
 .card1{
-	padding:3em;
+	padding: 1em;
 	border-radius: 15px;
 	box-shadow: 2px 0px 2px #FE4880;
+	padding-bottom: 2em;
+	padding-top: 2em;
 
 }
 .card2{
@@ -141,7 +143,7 @@
 	justify-content: center !important;
     align-items: center!important;
 }
-.qContainer{
+.qCont{
 	overflow-x: hidden; 
 	scrollbar-arrow-color: #FE4880 !important;
 }
@@ -152,3 +154,46 @@
 	margin-top: 4em;
 	border-radius: 15px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+.container-fluid{
+    padding: 0;
+    overflow-x: hidden;
+   
+}
+*/
+.card {
+    /*animates card elements*/
+    margin: 3%;
+    width: 20rem;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 17px rgba(48, 6, 42, 0.35);
+    transition: all 0.3s ease-in-out;
+  }
+
+.card:hover {
+    /* animates card motion on hover */
+    transform: translateY(-7px);
+  }
+  
+  
+  .cards {
+    /*allows for cards to append side by side*/
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 6%;
+  }
+  .blockquote {
+    font-size: 1rem;
+  }
