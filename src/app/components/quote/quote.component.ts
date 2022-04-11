@@ -23,10 +23,10 @@ export class QuoteComponent implements OnInit {
 
   deletingQuote(deleteQuote, index){
     if(deleteQuote){
-        let toDelete =confirm("Are you sure you want to delete this quote?")
-
+        let toDelete = confirm("Proceed to delete?")
+        
         if(toDelete){
-            this.quotes.splice(index,1)
+          this.quotes = this.quotes.filter((v, i)=> i !== index);
         }
     }
 }
@@ -61,7 +61,7 @@ export class QuoteComponent implements OnInit {
         quoteTitle:'Testing leads to failure, and failure leads to understanding.',
         author : 'Burt Rutan',
         publisher: 'AO',
-        postDate: new Date(2020,7,23),
+        postDate: new Date(2022,2,2),
         likes : 10,
         dislikes:2,
       },
@@ -78,7 +78,7 @@ export class QuoteComponent implements OnInit {
           quoteTitle:'The best error message is the one that never shows up',
           author : 'Thomas Fuchs',
           publisher: 'Atieno',
-          postDate: new Date(2020,7,23),
+          postDate: new Date(2022,8,8),
           likes : 30,
           dislikes:5,
         }, 
@@ -86,7 +86,7 @@ export class QuoteComponent implements OnInit {
           quoteTitle:"Don't write better error messages, write code that doesn't need them.",
           author : 'Jaon C. Mc Donald',
           publisher: 'AO',
-          postDate: new Date(2020,7,23),
+          postDate: new Date(2021,6,18),
           likes : 20,
           dislikes:1,
         },
@@ -94,7 +94,7 @@ export class QuoteComponent implements OnInit {
           quoteTitle:" The only way to learn a new programming language is by writing programs in it.",
           author : 'Dennis Ritchie',
           publisher: 'Gama',
-          postDate: new Date(2020,7,23),
+          postDate: new Date(2022,2,21),
           likes : 10,
           dislikes:2,
         }, 

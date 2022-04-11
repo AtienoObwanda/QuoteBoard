@@ -50,7 +50,7 @@
         </div>
         <div class="p-2 shadow border popQuote">
           <h1 class="appI">Popular Quotes</h1>
-          <div class="qCont" style="overflow-y:auto; height:400px">
+          <div class="qCont" style="overflow-y:auto; height:600px">
           <div class="row">
     
             <div class="col-sm-12">
@@ -59,19 +59,26 @@
                         <div class="card-body" appHighlightQuote *ngIf="highlightHighest() == quote.likes && quote.likes > 0" >
                         <blockquote class="blockquote mb-0 card-body">
                             <p>{{quote.quoteTitle}}</p>
+                            <br/>
                             <footer class="blockquote-footer">
                                 <cite title="Source Title" style="color: black;">{{quote.author|titlecase}}</cite>
-                                <small style="float:right; font-size:0.7rem;" ><b style="color:rgb(90, 11, 74)">Sats</b> </small>
+                                <br/><br/>
+
+                                <small style="float:right; font-size:0.7rem;" ><b style="color:rgb(90, 11, 74)">Uploaded on:  {{quote.postDate|date}}</b> </small>
                             </footer>
                             
                           </blockquote>
                         </div>
                         <div class="card-body"  *ngIf="highlightHighest() != quote.likes || quote.likes == 0" >
                             <blockquote class="blockquote mb-0 card-body">
-                                <p>{{quote.quoteTitle}}</p>
+                                <p>{{quote.quoteTitle}}</p>                           
+                                 <br/>
+
+
                                 <footer class="blockquote-footer">
                                     <cite title="Source Title" style="color: black;">{{quote.author|titlecase}}</cite>
-                                    <small style="float:right; font-size:0.7rem;"><b style="color:rgb(90, 11, 74)">Quote</b> </small>
+                                    <br/><br/>
+                                    <small style="float:right; font-size:0.7rem;"><b style="color:rgb(90, 11, 74)">Uploaded on:  {{quote.postDate|date}}</b></small>
                                 </footer>
                                 
                               </blockquote>

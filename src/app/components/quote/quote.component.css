@@ -97,13 +97,6 @@
 	width: 40%;
 	box-shadow: 1px 0px 4px #FE4880;
 }
-.icon{
-	display: flex;
-	flex-direction: row;
-	padding-left: 2em;
-	padding-right: 2em;
-	
-}
 
 .id{
 	display: none;
@@ -122,23 +115,29 @@
 	
 }
 
+
 .quote-submit {
 	display: block;
-	width: 100%;
-	max-width: 150px;
+	max-width: 140px;
 	appearance: none;
-	border: none;
+	border-color: #FE4880;
 	outline: none;
 	background: none;
 
-	background-color: #FE4880;
-	color: #FFF;
+	color: #FE4880;
 	margin: 15px auto;
+	border-radius: round;
 
 	padding: 10px 15px;
 	font-size: 16px;
 	font-weight: 700;
 }
+
+.quote-submit :hover{
+	border-color: #2900A5;
+	color: #2900A5;
+}
+
 .quoteForm{
 	justify-content: center !important;
     align-items: center!important;
