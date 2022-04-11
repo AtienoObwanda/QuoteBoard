@@ -12,34 +12,34 @@
         <div class="row">
           <div class="col">
             <div class="shadow card2" >
-              <form (submit)="addQuote(quotes)" class="quoteForm">
-              <div class="input-group mb-3">
-                <input 
-                type="text" 
-                class="form-control"
-                name="inputQuote"
-             
-                placeholder=" Quote  Title">
-              </div>
-              <div class="input-group mb-3">
-                <input 
-                type="text" 
-                class="form-control"
-                name="inputAuthor"
+              <form (submit)="addQuote()" class="quoteForm">
+                <div class="input-group mb-3">
+                  <input 
+                  type="text" 
+                  class="form-control"
+                  name="inputQuote"
+                  [(ngModel)]="inputQuote" 
+                  placeholder=" Quote  Title">
+                </div>
+                <div class="input-group mb-3">
+                  <input 
+                  type="text" 
+                  class="form-control"
+                  name="inputAuthor"
+                  [(ngModel)]="inputAuthor" 
+                  placeholder=" Quote  Author">
+                </div>
+                <div class="input-group mb-3">
+                  <input 
+                  type="text" 
+                  class="form-control"
+                  name="inputPublisher"
+                  [(ngModel)]="inputPublisher" 
+                  placeholder=" Published By:">
+                </div>
+                <button class="btn btn-outline-success" type="submit" class="quote-submit">POST  QUOTE</button>
                 
-                placeholder=" Quote  Author">
-              </div>
-              <div class="input-group mb-3">
-                <input 
-                type="text" 
-                class="form-control"
-                name="inputPublisher"
-              
-                placeholder=" Published By:">
-              </div>
-              <button class="btn btn-outline-success" type="submit" class="quote-submit">POST  QUOTE</button>
-              
-              </form>
+                </form>
             </div>
           </div>
           <div class="col">
@@ -56,27 +56,27 @@
             <div class="col-sm-12">
                 <div class="cards">
                     <div class="card"  *ngFor='let quote of quotes; let i=index'>
-                        <div class="card-body" appHighlightQuote *ngIf="highlightHighest() == quote.upVote && quote.upVote > 0" >
+                        <div class="card-body" appHighlightQuote *ngIf="highlightHighest() == quote.likes && quote.likes > 0" >
                         <blockquote class="blockquote mb-0 card-body">
-                            <p>{{quote.quote}}</p>
+                            <p>{{quote.quoteTitle}}</p>
                             <footer class="blockquote-footer">
                                 <cite title="Source Title" style="color: black;">{{quote.author|titlecase}}</cite>
-                                <small style="float:right; font-size:0.7rem;" (click)="toggleDetails(i);"><b style="color:rgb(90, 11, 74)">See more</b> </small>
+                                <small style="float:right; font-size:0.7rem;" ><b style="color:rgb(90, 11, 74)">Sats</b> </small>
                             </footer>
                             
                           </blockquote>
                         </div>
-                        <div class="card-body"  *ngIf="highlightHighest() != quote.upVote || quote.upVote == 0" >
+                        <div class="card-body"  *ngIf="highlightHighest() != quote.likes || quote.likes == 0" >
                             <blockquote class="blockquote mb-0 card-body">
-                                <p>{{quote.quote}}</p>
+                                <p>{{quote.quoteTitle}}</p>
                                 <footer class="blockquote-footer">
                                     <cite title="Source Title" style="color: black;">{{quote.author|titlecase}}</cite>
-                                    <small style="float:right; font-size:0.7rem;" (click)="toggleDetails(i);"><b style="color:rgb(90, 11, 74)">See more</b> </small>
+                                    <small style="float:right; font-size:0.7rem;"><b style="color:rgb(90, 11, 74)">Quote</b> </small>
                                 </footer>
                                 
                               </blockquote>
                             </div>
-                        <app-quotes-details *ngIf ="quote.showDetails " [quote]='quote' (deleteQuote) ="deletingQuote($event,i)"></app-quotes-details>
+                        <app-quotes-action  [quote]='quote' (deleteQuote) ="deletingQuote($event,i)"></app-quotes-action>
                     </div>
         
                 </div>

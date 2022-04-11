@@ -2,7 +2,7 @@ import { Quote } from '@angular/compiler';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import {Quotes} from '../../model/Quotes'
 @Component({
-  selector: 'app-quotes-details',
+  selector: 'app-quotes-action',
   templateUrl: './quote-action.component.html',
   styleUrls: ['./quote-action.component.css']
 })
@@ -18,16 +18,16 @@ export class QuoteActionComponent implements OnInit {
     
   constructor() { }
 
-  //function that increments upvotes
+  //upvotes
 
-  upVote(){
-      this.quote.upVote++;
+  quoteLikes(){
+      this.quote.likes++;
   }
 
-  //function that increments downvotes
+  //downvotes
 
-  downVote(){
-      this.quote.downVote++;
+  dislikes(){
+      this.quote.dislikes--;
   }
 
   ngOnInit(): void {

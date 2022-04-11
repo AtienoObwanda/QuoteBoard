@@ -154,27 +154,16 @@
 	margin-top: 4em;
 	border-radius: 15px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-.container-fluid{
-    padding: 0;
-    overflow-x: hidden;
-   
+.cards{
+	display: flex;
+    flex-wrap: wrap;
+    margin-left: 6%;
 }
-*/
+
 .card {
     /*animates card elements*/
+
+
     margin: 3%;
     width: 20rem;
     transform: translateY(-3px);
@@ -183,17 +172,11 @@
   }
 
 .card:hover {
-    /* animates card motion on hover */
-    transform: translateY(-7px);
+	box-shadow: 1px 0px 4px #FE4880;
+
   }
   
-  
-  .cards {
-    /*allows for cards to append side by side*/
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: 6%;
-  }
   .blockquote {
     font-size: 1rem;
+	color: #FE4880;
   }
