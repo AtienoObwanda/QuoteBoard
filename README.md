@@ -10,7 +10,7 @@
 
 # Live Page
 
-**Navigate:** *`http://localhost:4200/`*
+**Navigate:** *`https://atienoobwanda.github.io/QuoteBoard/`*
 
 ****
 **Features**
