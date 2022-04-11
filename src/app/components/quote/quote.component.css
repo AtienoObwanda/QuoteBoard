@@ -124,7 +124,7 @@
 	outline: none;
 	background: none;
 
-	color: #FE4880;
+	color: #2900A5;
 	margin: 15px auto;
 	border-radius: round;
 
@@ -134,7 +134,7 @@
 }
 
 .quote-submit :hover{
-	border-color: #2900A5;
+	border-color: #FE4880;
 	color: #2900A5;
 }
 
