@@ -10,7 +10,7 @@
 
 # Live Page
 
-**Navigate:** *`https://atienoobwanda.github.io/QuoteBoard/`*
+**Navigate to:** *`https://atienoobwanda.github.io/QuoteBoard/`*
 
 ****
 **Features**
@@ -54,7 +54,7 @@ git clone git@github.com:AtienoObwanda/QuoteBoard.git
     atom .
 ```
 *Next, download the latest dependencies for Angular, run npm install, then also add fontawesome as well as bootstrap:* </br>
-* To start the local server, run:*
+*To start the local server, run:*
 ```js
     ng serve --o
 ```
