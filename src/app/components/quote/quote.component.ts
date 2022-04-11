@@ -31,16 +31,16 @@ export class QuoteComponent implements OnInit {
     }
 }
 
-  highlightHighest() {
+  highlight() {
     let quoteslikes = []
     let highestlikes: number
     for (let j = 0; j < this.quotes.length; j++) {
       quoteslikes.push(this.quotes[j].likes)
     }
     
-    quoteslikes.sort(function (a, b) {
-        //if b>a then b-a>0 and will return a positive number
-      return b - a
+    quoteslikes.sort(function (i, j) {
+        
+      return j - i
     })
     highestlikes = quoteslikes[0]
     return highestlikes;

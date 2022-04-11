@@ -56,7 +56,7 @@
             <div class="col-sm-12">
                 <div class="cards">
                     <div class="card"  *ngFor='let quote of quotes; let i=index'>
-                        <div class="card-body" appHighlightQuote *ngIf="highlightHighest() == quote.likes && quote.likes > 0" >
+                        <div class="card-body" appHighlightQuote *ngIf="highlight() == quote.likes && quote.likes > 0" >
                         <blockquote class="blockquote mb-0 card-body">
                             <p>{{quote.quoteTitle}}</p>
                             <br/>
@@ -69,7 +69,7 @@
                             
                           </blockquote>
                         </div>
-                        <div class="card-body"  *ngIf="highlightHighest() != quote.likes || quote.likes == 0" >
+                        <div class="card-body"  *ngIf="highlight() != quote.likes || quote.likes == 0" >
                             <blockquote class="blockquote mb-0 card-body">
                                 <p>{{quote.quoteTitle}}</p>                           
                                  <br/>
