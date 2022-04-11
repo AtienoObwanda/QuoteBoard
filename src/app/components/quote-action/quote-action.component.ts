@@ -27,7 +27,7 @@ export class QuoteActionComponent implements OnInit {
   //downvotes
 
   dislikes(){
-      this.quote.dislikes--;
+      this.quote.dislikes++;
   }
 
   ngOnInit(): void {
