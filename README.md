@@ -1,11 +1,12 @@
  # QuoteBoard
 ![Alt text](/src/assets/main.png?raw=true "Optional Title")
 
-# Author
- **Atieno Obwanda**
 
 # Description
 *Quote Board is application where users can create quotes and have those quotes voted on whether they are terrible or are inspirational.*
+****
+# Author
+ **Atieno Obwanda**
 
 # Live Page
 
@@ -35,7 +36,6 @@
 ****
 
 **How to use**
-****
 *From your terminal:* </br>
 ```js
 git clone git@github.com:AtienoObwanda/QuoteBoard.git
@@ -88,7 +88,7 @@ Future work on this project includes but is not limited to the following:
 **Contact Information**
 
 *Incase of any question or contributions, you can contact me through:*
- [Atieno Obwanda](https://github.com/AtienoObwanda) *atienoobwanda@gmail.com* </br>
+ [Atieno Obwanda](https://github.com/AtienoObwanda) ||*atienoobwanda@gmail.com* </br>
 
 ****
 
