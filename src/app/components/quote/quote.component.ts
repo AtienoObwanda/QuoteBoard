@@ -9,6 +9,10 @@ import { Quotes } from '../../model/Quotes';
 })
 export class QuoteComponent implements OnInit {
 
+  num1:number
+  lnum:number
+  c:number//counter
+
   required: boolean = true;
 
     // Quotes Array
@@ -33,18 +37,14 @@ export class QuoteComponent implements OnInit {
 }
 
   highlight() {
-    let quoteslikes = []
-    let highestlikes: number
-    for (let j = 0; j < this.quotes.length; j++) {
-      quoteslikes.push(this.quotes[j].likes)
+    this.num1 = 0
+    this.lnum = 0
+
+    for(this.c=0 ; this.c < this.quotes.length; this.c++) {
+      this.lnum = this.quotes[this.c].likes;
+      if(this.lnum > this.num1){this.num1 = this.lnum}
     }
-    
-    quoteslikes.sort(function (i, j) {
-        
-      return j - i
-    })
-    highestlikes = quoteslikes[0]
-    return highestlikes;
+    return  this.num1
   }
 
 
@@ -55,7 +55,7 @@ export class QuoteComponent implements OnInit {
         author : 'John Johnson',
         publisher: 'Atieno',
         postDate: new Date(2022,4,11),
-        likes : 18,
+        likes : 0,
         dislikes:0,
       },
        {
@@ -63,7 +63,7 @@ export class QuoteComponent implements OnInit {
         author : 'Burt Rutan',
         publisher: 'AO',
         postDate: new Date(2022,2,2),
-        likes : 10,
+        likes : 0,
         dislikes:2,
       },
       
@@ -72,7 +72,7 @@ export class QuoteComponent implements OnInit {
           author : ' Chris Pine',
           publisher: 'Gama',
           postDate: new Date(2022,4,10),
-          likes : 15,
+          likes : 0,
           dislikes:1,
         },
         {
@@ -80,7 +80,7 @@ export class QuoteComponent implements OnInit {
           author : 'Thomas Fuchs',
           publisher: 'Atieno',
           postDate: new Date(2022,8,8),
-          likes : 30,
+          likes : 0,
           dislikes:5,
         }, 
         {
@@ -96,7 +96,7 @@ export class QuoteComponent implements OnInit {
           author : 'Dennis Ritchie',
           publisher: 'Gama',
           postDate: new Date(2022,2,21),
-          likes : 10,
+          likes : 0,
           dislikes:2,
         }, 
         

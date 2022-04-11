@@ -1,8 +1,8 @@
-import { HighlightQuoteDirective } from './highlight-quote.directive';
+import { HighlightDirective } from './highlight-quote.directive';
 
-describe('HighlightQuoteDirective', () => {
+describe('HighlightDirective', () => {
   it('should create an instance', () => {
-    const directive = new HighlightQuoteDirective();
+    const directive = new HighlightDirective();
     expect(directive).toBeTruthy();
   });
 });
