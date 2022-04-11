@@ -1,6 +1,11 @@
  # QuoteBoard
 ![Alt text](/src/assets/main.png?raw=true "Optional Title")
 
+# Author
+ **Atieno Obwanda**
+
+# Description
+*Quote Board is application where users can create quotes and have those quotes voted on whether they are terrible or are inspirational.*
 
 ## Development server
 
