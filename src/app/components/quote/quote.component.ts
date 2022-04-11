@@ -8,7 +8,8 @@ import { Quotes } from '../../model/Quotes';
   styleUrls: ['./quote.component.css']
 })
 export class QuoteComponent implements OnInit {
-  istoggled: boolean = false;
+
+  required: boolean = true;
 
     // Quotes Array
     quotes:Quotes[]

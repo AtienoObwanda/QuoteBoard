@@ -1,24 +1,24 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'time'
+  name: 'postTime'
 })
 export class TimePipe implements PipeTransform {
 
   transform(value: any): number {
+    let today:Date = new Date();
+    let todayWithNoTime:any = new Date(today.getFullYear(),today.getMonth(),today.getDate())
+    var dateDifference =Math.abs(todayWithNoTime - value)
+    const secondsInADay= 86400;
 
-    let currentDate = new Date();
+    var dateDifferenceSeconds=dateDifference*0.001; 
+    var dateCounter = dateDifferenceSeconds/secondsInADay;
 
- 
-
-    let difference = currentDate.getTime() - value.getTime();
-
-
-    difference=difference /(24*60*60*1000);
-
-
-
-    return Math.ceil(difference)-1;
+    if (dateCounter >= 1 && todayWithNoTime > value){
+        return dateCounter;
+    }else{
+        return 0;
+    }
   }
 
 }

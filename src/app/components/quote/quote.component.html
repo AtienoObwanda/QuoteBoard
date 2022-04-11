@@ -11,15 +11,25 @@
         </div>
         <div class="row">
           <div class="col">
+            
+          </div>
+          <div class="col-8">
             <div class="shadow card2" >
               <form (submit)="addQuote()" class="quoteForm">
                 <div class="input-group mb-3">
+
                   <input 
-                  type="text" 
+                  required
+                  type="text"
+                  id="quote" 
                   class="form-control"
                   name="inputQuote"
                   [(ngModel)]="inputQuote" 
-                  placeholder=" Quote  Title">
+                  placeholder=" Quote  Title"
+                  
+                  >
+                  
+
                 </div>
                 <div class="input-group mb-3">
                   <input 
@@ -43,9 +53,7 @@
             </div>
           </div>
           <div class="col">
-            <div class="shadow card2" >
-              <p>pop</p>
-            </div>
+            
           </div>
         </div>
         <div class="p-2 shadow border popQuote">
